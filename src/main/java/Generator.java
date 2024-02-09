@@ -17,10 +17,13 @@ public class Generator {
 
         while (counter < numberOfCars) {
             int randomNumber = random.nextInt(carBrand.length);
-            int regionalCode = random.nextInt(regionalCodes.length);
+            String newCar = carBrand[randomNumber];
+            String regionalCode = regionalCodes[random.nextInt(regionalCodes.length)];
+            int number = random.nextInt(9999);
 
-            if (!cars.contains(carBrand[randomNumber])) {
-                cars.add(carBrand[randomNumber]);
+            if (!cars.contains(newCar)) {
+                newCar = newCar + " " + regionalCode + number;
+                cars.add(newCar);
                 counter++;
             }
         }
