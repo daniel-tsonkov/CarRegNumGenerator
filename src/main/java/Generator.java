@@ -8,37 +8,34 @@ public class Generator {
         String [] carBrand = new String[]{"Volkswagen", "Mercedes", "Alfa Romeo", "Bentley", "Moscvitch", "Lada", "Nissan", "Peugeot", "Rolls-Royce", "Toyota", "Honda", "Ford", "Chevrolet", "BMW", "Audi", "Hyundai", "Kia", "Subaru", "Mazda", "Fiat", "Renault", "Skoda", "Volvo", "Jaguar", "Land Rover", "Porsche", "Tesla", "Mitsubishi", "Suzuki", "Citroen"};
         Arrays.sort(carBrand);
         Map<String, String> regionalCodeOfCarNumber = new HashMap<>();
-        regionalCodeOfCarNumber.put("A", "София - столица");
-        regionalCodeOfCarNumber.put("B", "Бургас");
-        regionalCodeOfCarNumber.put("BH", "Бяла");
-        regionalCodeOfCarNumber.put("BP", "Благоевград");
-        regionalCodeOfCarNumber.put("BT", "Батак");
-        regionalCodeOfCarNumber.put("EB", "Елена");
-        regionalCodeOfCarNumber.put("EBE", "Елена");
-        regionalCodeOfCarNumber.put("EBO", "Елена");
-        regionalCodeOfCarNumber.put("HK", "Хасково");
-        regionalCodeOfCarNumber.put("HM", "Хумата");
-        regionalCodeOfCarNumber.put("KB", "Кубрат");
-        regionalCodeOfCarNumber.put("KK", "Карлово");
-        regionalCodeOfCarNumber.put("KH", "Кърджали");
-        regionalCodeOfCarNumber.put("KK", "Кюстендил");
-        regionalCodeOfCarNumber.put("KP", "Копривщица");
+        regionalCodeOfCarNumber.put("E", "Благоевград");
+        regionalCodeOfCarNumber.put("A", "Бургас");
+        regionalCodeOfCarNumber.put("B", "Варна");
+        regionalCodeOfCarNumber.put("BT", "Велико Търново");
+        regionalCodeOfCarNumber.put("BH", "Видин");
+        regionalCodeOfCarNumber.put("BP", "Враца");
+        regionalCodeOfCarNumber.put("EB", "Габрово");
+        regionalCodeOfCarNumber.put("K", "Кърджали");
+        regionalCodeOfCarNumber.put("KH", "Кюстендил");
+        regionalCodeOfCarNumber.put("OB", "Ловеч");
         regionalCodeOfCarNumber.put("M", "Монтана");
-        regionalCodeOfCarNumber.put("MO", "Монтана");
-        regionalCodeOfCarNumber.put("OH", "Охрид");
-        regionalCodeOfCarNumber.put("PA", "Панагюрище");
-        regionalCodeOfCarNumber.put("PB", "Плевен");
-        regionalCodeOfCarNumber.put("PK", "Първомай");
-        regionalCodeOfCarNumber.put("PX", "Пловдив");
-        regionalCodeOfCarNumber.put("RT", "Русе");
-        regionalCodeOfCarNumber.put("SO", "София - област");
-        regionalCodeOfCarNumber.put("ST", "Стара Загора");
+        regionalCodeOfCarNumber.put("PA", "Пазарджик");
+        regionalCodeOfCarNumber.put("PK", "Перник");
+        regionalCodeOfCarNumber.put("EH", "Плевен");
+        regionalCodeOfCarNumber.put("PB", "Пловдив");
+        regionalCodeOfCarNumber.put("PP", "Разград");
+        regionalCodeOfCarNumber.put("P", "Русе");
+        regionalCodeOfCarNumber.put("CC", "Силистра");
+        regionalCodeOfCarNumber.put("CH", "Сливен");
+        regionalCodeOfCarNumber.put("CO", "София-област");
+        regionalCodeOfCarNumber.put("C", "София-столица");
+        regionalCodeOfCarNumber.put("CA", "София-столица");
+        regionalCodeOfCarNumber.put("CB", "София-столица");
+        regionalCodeOfCarNumber.put("CT", "Стара Загора");
         regionalCodeOfCarNumber.put("T", "Търговище");
-        regionalCodeOfCarNumber.put("TP", "Троян");
-        regionalCodeOfCarNumber.put("XA", "Хвърчил");
-        regionalCodeOfCarNumber.put("XA", "Хвърчил");
-        regionalCodeOfCarNumber.put("XA", "Хвърчил");
-        regionalCodeOfCarNumber.put("YA", "Ямбол");
+        regionalCodeOfCarNumber.put("X", "Хасково");
+        regionalCodeOfCarNumber.put("H", "Шумен");
+        regionalCodeOfCarNumber.put("Y", "Ямбол");
 
         int numberOfCars = 10;
         System.out.println("Cars number: " + numberOfCars);
@@ -57,37 +54,5 @@ public class Generator {
         for (int i = 0; i < cars.size(); i++) {
             System.out.printf("%d %s\n", i + 1, cars.get(i));
         }
-
-        /*A: София - столица
-        B: Бургас
-        BH: Бяла
-        BP: Благоевград
-        BT: Батак
-        EB: Елена
-        EBE: Елена
-        EBO: Елена
-        HK: Хасково
-        HM: Хумата
-        KB: Кубрат
-        KK: Карлово
-        KH: Кърджали
-        KK: Кюстендил
-        KP: Копривщица
-        M: Монтана
-        MO: Монтана
-        OH: Охрид
-        PA: Панагюрище
-        PB: Плевен
-        PK: Първомай
-        PX: Пловдив
-        RT: Русе
-        SO: София - област
-        ST: Стара Загора
-        T: Търговище
-        TP: Троян
-        XA: Хвърчил
-        XA: Хвърчил
-        XA: Хвърчил
-        YA: Ямбол*/
     }
 }
