@@ -8,7 +8,6 @@ public class Generator {
         String [] carBrand = new String[]{"Volkswagen", "Mercedes", "Alfa Romeo", "Bentley", "Moscvitch", "Lada", "Nissan", "Peugeot", "Rolls-Royce", "Toyota", "Honda", "Ford", "Chevrolet", "BMW", "Audi", "Hyundai", "Kia", "Subaru", "Mazda", "Fiat", "Renault", "Skoda", "Volvo", "Jaguar", "Land Rover", "Porsche", "Tesla", "Mitsubishi", "Suzuki", "Citroen"};
         Arrays.sort(carBrand);
         String [] regionalCodes = new String[]{"E", "A", "B","BT", "BH", "BP", "EB", "K", "KH", "OB", "M", "PA", "PK", "EH", "PB", "PP", "P", "CC", "CH", "CO", "C", "CA", "CB", "CT", "T", "X", "H", "Y"};
-        Map<String, String> regionalCodeOfCarNumber = new HashMap<>();
 
         int numberOfCars = 10;
         System.out.println("Cars number: " + numberOfCars);
