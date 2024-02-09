@@ -17,10 +17,17 @@ public class Generator {
 
         while (counter < numberOfCars) {
             int randomNumber = random.nextInt(carBrand.length);
-            StringBuilder order = new StringBuilder((counter + 1 + "               ").substring(0, 2));
-            StringBuilder newCar = new StringBuilder(order + "| " + carBrand[randomNumber]);
+            StringBuilder newCar = new StringBuilder((counter + 1 + "               ").substring(0, 2) + "| " + carBrand[randomNumber]);
             String regionalCode = regionalCodes[random.nextInt(regionalCodes.length)];
-            int fourDigitNumber = random.nextInt(1000, 9999);
+            String fourDigitNumber = String.valueOf(random.nextInt(9999));
+
+            if (fourDigitNumber.length() == 1) {
+                fourDigitNumber = "000" + fourDigitNumber;
+            } else if (fourDigitNumber.length() == 2) {
+                fourDigitNumber = "00" + fourDigitNumber;
+            }else if (fourDigitNumber.length() == 3) {
+                fourDigitNumber = "0" + fourDigitNumber;
+            }
 
             if (!cars.contains(newCar.toString())) {
                 newCar = new StringBuilder((newCar + "               ").substring(0, 17));
@@ -34,8 +41,8 @@ public class Generator {
             }
         }
 
-        for (int i = 0; i < cars.size(); i++) {
-            System.out.println(cars.get(i));
+        for (String car : cars) {
+            System.out.println(car);
         }
     }
 }
