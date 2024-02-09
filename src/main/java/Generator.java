@@ -10,30 +10,32 @@ public class Generator {
         String [] regionalCodes = new String[]{"E", "A", "B","BT", "BH", "BP", "EB", "K", "KH", "OB", "M", "PA", "PK", "EH", "PB", "PP", "P", "CC", "CH", "CO", "C", "CA", "CB", "CT", "T", "X", "H", "Y"};
         String [] lastWord = new String[]{"А", "В", "Е", "К", "М", "Н", "О", "Р", "С", "Т", "У", "Х"};
 
-        int numberOfCars = 10;
+        int numberOfCars = 20;
         System.out.println("Cars number: " + numberOfCars);
         //int numberOfCars = Integer.parseInt(scanner.nextLine());
         int counter = 0;
 
         while (counter < numberOfCars) {
             int randomNumber = random.nextInt(carBrand.length);
-            String newCar = carBrand[randomNumber];
+            StringBuilder order = new StringBuilder((counter + 1 + "               ").substring(0, 2));
+            StringBuilder newCar = new StringBuilder(order + "| " + carBrand[randomNumber]);
             String regionalCode = regionalCodes[random.nextInt(regionalCodes.length)];
-            int number = random.nextInt(1000, 9999);
+            int fourDigitNumber = random.nextInt(1000, 9999);
 
-            if (!cars.contains(newCar)) {
-                newCar = newCar + " " + regionalCode + number;
+            if (!cars.contains(newCar.toString())) {
+                newCar = new StringBuilder((newCar + "               ").substring(0, 17));
+                newCar.append("| ").append(regionalCode).append(fourDigitNumber);
                 for (int i = 0; i < 2; i++) {
                     int lastChar = random.nextInt(lastWord.length);
-                    newCar = newCar + lastWord[lastChar];
+                    newCar.append(lastWord[lastChar]);
                 }
-                cars.add(newCar);
+                cars.add(newCar.toString());
                 counter++;
             }
         }
 
         for (int i = 0; i < cars.size(); i++) {
-            System.out.printf("%d %s\n", i + 1, cars.get(i));
+            System.out.println(cars.get(i));
         }
     }
 }
