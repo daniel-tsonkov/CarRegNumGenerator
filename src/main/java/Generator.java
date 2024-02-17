@@ -18,7 +18,7 @@ public class Generator {
         while (counter < numberOfCars) {
             int randomNumber = random.nextInt(carBrand.length);
             StringBuilder newCar = new StringBuilder((counter + 1 + "               ").substring(0, 2) + "| " + carBrand[randomNumber]);
-            String regionalCode = regionalCodes[random.nextInt(regionalCodes.length)];
+            String regionalCode = regionalCodes[random.nextInt(regionalCodes.length)] + " ";
             String fourDigitNumber = String.valueOf(random.nextInt(9999));
 
             if (fourDigitNumber.length() == 1) {
@@ -31,7 +31,7 @@ public class Generator {
 
             if (!cars.contains(newCar.toString())) {
                 newCar = new StringBuilder((newCar + "               ").substring(0, 17));
-                newCar.append("| ").append(regionalCode).append(fourDigitNumber);
+                newCar.append("|  ").append(regionalCode).append(fourDigitNumber).append(" ");
                 for (int i = 0; i < 2; i++) {
                     int lastChar = random.nextInt(lastWord.length);
                     newCar.append(lastWord[lastChar]);
